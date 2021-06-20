@@ -6,6 +6,7 @@ class_name CurvedLabel
 var isReady = false;
 var percentRange : float = 0.1;
 
+
 var textChars : PoolStringArray;
 var stringSize : Vector2 = Vector2.ZERO;
 var startPos : Vector2 = Vector2.ZERO;
@@ -170,6 +171,7 @@ func _createCurve():
 	
 	if self.curve.get_point_count() <= 2:
 		self._regenerateCurve();
+	
 	self.path.set_curve(self.curve);
 
 	self.add_child(self.path);
